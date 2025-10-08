@@ -2,7 +2,7 @@
 
 このリポジトリの `.github/workflows/note.yaml` は、以下のパイプラインをGitHub Actionsで実行します。
 
-1) **リサーチAgent**: Claude Code SDK の WebSearch / WebFetch によるリサーチレポート作成
+1) **リサーチAgent**: Claude Agent SDK の WebSearch / WebFetch によるリサーチレポート作成
 2) **執筆Agent**: Anthropic Claude 4.0 Sonnet でタイトル/本文/タグ(JSON)を生成
 3) **ファクトチェックAgent**: Tavily を使った検証結果を反映し本文を修正
 4) **ドラフトAgent**: Playwrightで note.com に下書き/公開（storageState を利用）
@@ -116,7 +116,7 @@ node login-note.mjs
 
 ## 動作イメージ
 
-1. **Research ジョブ**: Claude Code SDK を使用してWebSearchとWebFetchでリサーチを実行
+1. **Research ジョブ**: Claude Agent SDK を使用してWebSearchとWebFetchでリサーチを実行
 2. **Write ジョブ**: Claude Sonnet 4.0 でタイトル、本文、タグを生成
 3. **Fact-check ジョブ**: Tavily API で事実確認を行い、本文を修正
 4. **Post ジョブ**: Playwright でnote.comに自動投稿
@@ -141,7 +141,7 @@ node login-note.mjs
 ## 技術スタック
 
 - **GitHub Actions**: CI/CDパイプライン
-- **Claude Code SDK**: リサーチAgent（WebSearch/WebFetch）
+- **Claude Agent SDK**: リサーチAgent（WebSearch/WebFetch）
 - **AI SDK (Anthropic)**: 執筆・ファクトチェックAgent
 - **Tavily API**: 事実確認・検証
 - **Playwright**: note.com への自動投稿
@@ -159,7 +159,7 @@ node login-note.mjs
 
 ## 参考
 
-- [Claude Code SDK](https://github.com/anthropics/anthropic-claude-code)
+- [Claude Agent SDK](https://docs.claude.com/en/api/agent-sdk/overview)
 - [AI SDK (Anthropic)](https://sdk.vercel.ai/docs)
 - [Tavily API](https://docs.tavily.com/)
 - [Playwright](https://playwright.dev/)
